@@ -9,9 +9,17 @@
             var positionFinale = positionInitiale + new Point(0, 1);
             positionFinale = planète.Canoniser(positionFinale);
 
-            if (planète.PossèdeUnObstacle(positionFinale)) 
+            if (planète.PossèdeUnObstacle(positionFinale))
+            {
+              
                 return (orientation, positionInitiale, positionFinale);
-            else return (orientation, positionFinale, default);
+            }
+            else
+            {
+                
+                return (orientation, positionFinale, default);
+                
+            }
         }
     }
 }

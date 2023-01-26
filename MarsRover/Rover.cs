@@ -13,6 +13,7 @@ namespace MarsRover
             _planète = planète;
             _coordonnées = coordonnéesDépart;
             _orientation = orientation;
+
         }
 
         public (Orientation Orientation, Point Position, Point? ObstacleEventuel) Traiter(params IRoverCommande[] commandesATraiter)

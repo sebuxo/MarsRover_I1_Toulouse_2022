@@ -2,8 +2,8 @@
 {
     public class Orientation
     {
-        public static Orientation Nord = new ();
-        public static Orientation Est = new ();
+        public static Orientation Nord = new();
+        public static Orientation Est = new();
         public static Orientation Sud = new();
         public static Orientation Ouest = new();
 
