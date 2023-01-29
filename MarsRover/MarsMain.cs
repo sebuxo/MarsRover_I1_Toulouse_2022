@@ -11,7 +11,7 @@ class MarsMain
 
         Rover rover = new RoverBuilder()
                .SurUnePlanète(planète => planète.ToriqueDeTailleX(4))
-               .Orienté(Orientation.Sud)
+               .Orienté(new Orientation())
                .Positionné(0, 0)
                .Build();
         String commandLine = Console.ReadLine();
@@ -21,8 +21,9 @@ class MarsMain
         {
             if (commandsToChars[i].ToString().ToLower().Equals("a"))
             {
-                Console.WriteLine("mon orientation est : "+rover.GetOrientation().GetOrientation()+" ma position"+rover.getCoordonnees());
-                rover.Traiter(new AvancerCommande());     
+                Console.WriteLine("mon orientation est : "+rover.GetOrientation().GetOrientation());
+                rover.Traiter(new AvancerCommande());
+                Console.WriteLine("ma position"+rover.getCoordonnees());
                 continue;
             }
             if (commandsToChars[i].ToString().ToLower().Equals("g"))

@@ -1,44 +1,19 @@
-﻿namespace MarsRover
+﻿using System.Runtime.CompilerServices;
+
+namespace MarsRover
 {
     public class Orientation
     {
-        public static Orientation Nord = new();
-        public static Orientation Est = new();
-        public static Orientation Sud = new();
-        public static Orientation Ouest = new();
+        public String orientationActuel { get; set; } 
 
-        private Orientation() {
-            this.orientationActuel = Nord;
+        public Orientation() {
+            this.orientationActuel = "Nord";
        
         }
-
-        public Orientation orientationActuel { get; set; } 
-
-
-        public override string ToString()
-        {
-
-            if (orientationActuel.Equals(Nord))
-            {
-                return "Nord";
-            }
-            else if (orientationActuel.Equals(Sud))
-            {
-                return "Sud";
-            }
-            else if (orientationActuel.Equals(Est))
-            {
-                return "Est";
-            }
-           else if (orientationActuel.Equals(Ouest))
-            {
-                return "Ouest";
-            }
-            return "";
-        }
+        
         public String GetOrientation()
         {
-            return this.orientationActuel.ToString();
+            return this.orientationActuel;
         }
         public Orientation MouvementDextrogyre
         {
@@ -46,27 +21,27 @@
             get
             {
                
-                if (this.orientationActuel.Equals(Nord))
+                if (this.orientationActuel.Equals("Nord"))
                 {
            
-                    orientationActuel = Est;
-                    
-                    return Est;
+                    orientationActuel = "Est";
+
+                    return this;
                 }
-                if (this.orientationActuel.Equals(Est))
+                if (this.orientationActuel.Equals("Est"))
                 {
-                    orientationActuel = Sud;
-                    return Sud;
+                    orientationActuel = "Sud";
+                    return this;
                 }
-                if (this.orientationActuel.Equals(Sud))
+                if (this.orientationActuel.Equals("Sud"))
                 {
-                    orientationActuel = Ouest;
-                    return Ouest;
+                    orientationActuel = "Ouest";
+                    return this;
                 }
-                if (this.orientationActuel.Equals(Ouest))
+                if (this.orientationActuel.Equals("Ouest"))
                 {
-                    orientationActuel = Nord;
-                    return Nord;
+                    orientationActuel = "Nord";
+                    return this;
                 }
                 throw new NotSupportedException();
             }
@@ -75,13 +50,15 @@
         public Orientation MouvementSinistrogyre
         {
             get
-            {
+            {/*
                 if (this == Nord) return Ouest;
                 if (this == Est) return Nord;
                 if (this == Sud) return Est;
                 if (this == Ouest) return Sud;
 
-                throw new NotSupportedException();
+                throw new NotSupportedException();*/
+                return this;
+
             }
         }
     }
