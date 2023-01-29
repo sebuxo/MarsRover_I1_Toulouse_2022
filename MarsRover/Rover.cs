@@ -6,7 +6,7 @@ namespace MarsRover
     {
         private readonly IPlanète _planète;
         private Point _coordonnées;
-        private Orientation _orientation;
+        private Orientation _orientation ;
 
         public Rover(IPlanète planète, Point coordonnéesDépart, Orientation orientation)
         {
@@ -14,6 +14,12 @@ namespace MarsRover
             _coordonnées = coordonnéesDépart;
             _orientation = orientation;
 
+        }
+        public Orientation GetOrientation()
+        { return _orientation; }
+        public Point getCoordonnees()
+        {
+            return _coordonnées;
         }
 
         public (Orientation Orientation, Point Position, Point? ObstacleEventuel) Traiter(params IRoverCommande[] commandesATraiter)

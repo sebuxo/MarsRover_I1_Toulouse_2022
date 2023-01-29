@@ -7,9 +7,9 @@ namespace MarsRover.Commandes
         /// <inheritdoc />
         public (Orientation Orientation, Point Position, Point? ObstacleEventuel) Traiter(Orientation orientation, Point position, IPlanète _planète)
         {
-
-   
-            return (orientation.MouvementSinistrogyre, position, default);
+            orientation = orientation.MouvementSinistrogyre;
+  
+            return (orientation, position, default);
         }
     }
 }

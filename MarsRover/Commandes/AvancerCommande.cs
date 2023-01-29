@@ -16,7 +16,9 @@
             }
             else
             {
-                
+
+               // Console.WriteLine("My position" + positionFinale);
+               // Console.WriteLine("my orientation =" + orientation.GetOrientation());
                 return (orientation, positionFinale, default);
                 
             }
