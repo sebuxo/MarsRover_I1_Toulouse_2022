@@ -50,15 +50,34 @@ namespace MarsRover
         public Orientation MouvementSinistrogyre
         {
             get
-            {/*
-                if (this == Nord) return Ouest;
-                if (this == Est) return Nord;
-                if (this == Sud) return Est;
-                if (this == Ouest) return Sud;
 
-                throw new NotSupportedException();*/
-                return this;
 
+            {
+                if (this.orientationActuel.Equals("Nord"))
+                {
+
+                    orientationActuel = "Ouest";
+
+                    return this;
+                }
+                if (this.orientationActuel.Equals("Est"))
+                {
+                    orientationActuel = "Nord";
+                    return this;
+                }
+                if (this.orientationActuel.Equals("Sud"))
+                {
+                    orientationActuel = "Est";
+                    return this;
+                }
+                if (this.orientationActuel.Equals("Ouest"))
+                {
+                    orientationActuel = "Sud";
+                    return this;
+                }
+
+                
+                throw new NotSupportedException();
             }
         }
     }
