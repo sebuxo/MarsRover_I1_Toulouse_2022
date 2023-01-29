@@ -13,6 +13,7 @@
 
         public IPlanète Build()
         {
+
             IPlanète planète = _tailleTorique.HasValue ? new Tore(_tailleTorique.Value) : new PlanèteStub();
             if (_obstacleEventuel is not null) planète = new PlanèteObstacleDecorator(planète, _obstacleEventuel);
             return planète;
