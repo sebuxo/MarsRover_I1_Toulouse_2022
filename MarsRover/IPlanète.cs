@@ -6,5 +6,6 @@
 
         bool PossèdeUnObstacle(Point point);
 
+
     }
 }
