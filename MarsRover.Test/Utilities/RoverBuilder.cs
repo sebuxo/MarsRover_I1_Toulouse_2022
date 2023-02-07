@@ -2,7 +2,7 @@
 {
     internal class RoverBuilder
     {
-        private Orientation _orientation = Orientation.Sud;
+        private Orientation _orientation = new Orientation();
         private Point _positionDépart = new (0, 0);
         private IPlanète _planète = new PlanèteStub();
 

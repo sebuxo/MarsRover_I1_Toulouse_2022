@@ -10,6 +10,10 @@ namespace MarsRover
             this.orientationActuel = "Nord";
        
         }
+        public Orientation(String orientationActuel)
+        {
+            this.orientationActuel = orientationActuel;
+        }
         
         public String GetOrientation()
         {

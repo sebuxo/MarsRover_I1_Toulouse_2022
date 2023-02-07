@@ -12,7 +12,7 @@ namespace MarsRover.Test
             // ET un rover positionné en 0,0 orienté Nord
             var rover = new RoverBuilder()
                 .SurUnePlanète(planète => planète.ToriqueDeTailleX(2))
-                .Orienté(Orientation.Nord)
+                .Orienté(new Orientation())
                 .Positionné(0, 0)
                 .Build();
 
@@ -30,7 +30,7 @@ namespace MarsRover.Test
             // ET un rover positionné en 0,0 orienté Nord
             var rover = new RoverBuilder()
                 .SurUnePlanète(planète => planète.ToriqueDeTailleX(2))
-                .Orienté(Orientation.Nord)
+                .Orienté(new Orientation())
                 .Positionné(0, 0)
                 .Build();
 
